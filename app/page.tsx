@@ -1,25 +1,25 @@
 
 export default function Home(){
   return (
-    <main className="scroll-smooth">
-
+    <div>
       <section 
         id="home" 
-        className="min-h-screen flex items-center px-6 max-w-4xl mx-auto"> 
+        className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
         <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center w-full">
           <div>
         <h1 className="text-5xl font-bold">Maroia Baani</h1>
         <p className="text-xl">Cybersecurity and networking student</p>
         </div>
-        </div>
-        <div>
-          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-black-300 shadow-lg">
+       
+        <div className="flex justify-center md:justify-end">
+          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-black shadow-lg">
              <img
               src="/profile.jpg"
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />
           </div>  
+         </div>
         </div>
       </section>
 
@@ -47,6 +47,6 @@ export default function Home(){
           <a href="https://www.linkedin.com/in/maroia-baani-896498244" className="text-blue-500 hover:underline">LinkedIn</a>.
         </p>
       </section>
-    </main>
+    </div>
   )
 }
