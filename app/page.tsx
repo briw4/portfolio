@@ -5,15 +5,15 @@ export default function Home(){
 
       <section 
         id="home" 
-        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
-        <div className="grid md:grid-cols-2 gap-10 items-center w-full">
-          <div className="flex flex-col gap-4">
+        className="min-h-screen flex items-center px-6 max-w-4xl mx-auto"> 
+        <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center w-full">
+          <div>
         <h1 className="text-5xl font-bold">Maroia Baani</h1>
         <p className="text-xl">Cybersecurity and networking student</p>
         </div>
         </div>
-        <div className="flex justify-center md:justify-end">
-          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
+        <div>
+          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-black-300 shadow-lg">
              <img
               src="/profile.jpg"
               alt="Profile Picture"
