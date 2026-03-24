@@ -3,6 +3,13 @@
 import { useRef } from "react";
 import ContactForm from "@/components/ContactForm";
 
+const BG_WORDS = [
+  "C", "C++", "C#", "Python", "Tailwind", "Next.js", "TypeScript",
+  "Nmap", "Wireshark", "Metasploit", "Burp Suite", "Linux", "Bash",
+  "TCP/IP", "Firewall", "VPN", "SSH", "Git", "HTML", "CSS",
+  "Kali", "OSI", "DNS", "HTTP", "HTTPS", "SQL", "JWT",
+];
+
 const projects = [
   {
     title: "Project 1",
