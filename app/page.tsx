@@ -17,6 +17,7 @@ const projects = [
 export default function Home(){
   return (
     <div>
+
       <section 
         id="home" 
         className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
@@ -37,6 +38,7 @@ export default function Home(){
          </div>
         </div>
       </section>
+
 
       <section 
         id="about"
@@ -81,12 +83,41 @@ export default function Home(){
       <section 
         id="contact"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
+        <div className="w-full">
         <h2 className="text-3xl font-semibold">Contact</h2>
-        <p className="mt-4">You can reach me at{" "}
-          <a href="mailto:marwabaani@gmail.com" className="text-blue-500 hover:underline">marwabaani@gmail.com</a>
-          {" "}or connect with me on {" "}
-          <a href="https://www.linkedin.com/in/maroia-baani-896498244" className="text-blue-500 hover:underline">LinkedIn</a>.
-        </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border border-black rounded-2xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-4">Send a message</h3>
+              <form className="flex flex-col gap-4">
+                <input 
+                  type="text"
+                  placeholder="Your name"
+                  className="border border-black rounded-lg px-4 py-2"
+                />
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="border border-black rounded-lg px-4 py-2"
+                />
+                <textarea
+                  placeholder="Your message"
+                  className="border border-black rounded-lg px-4 py-2"
+                />
+                <button
+                  type="submit"
+                  className="bg-black text-white rounded-lg py-2 px-4 hover:opacity-90 transition"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+            <p className="flex flex-col gap-4">
+              <a href="mailto:marwabaani@gmail.com" className="text-blue-500 hover:underline">marwabaani@gmail.com</a>
+              {" "}or connect with me on {" "}
+              <a href="https://www.linkedin.com/in/maroia-baani-896498244" className="text-blue-500 hover:underline">LinkedIn</a>.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   )
