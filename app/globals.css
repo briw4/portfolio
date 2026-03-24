@@ -5,3 +5,14 @@ html {
 body {
   margin: 0;
 }
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;  /* forces vertical snapping */
+}
+
+section{
+  height: 100vh;  /*each secion=full screen height*/
+  scroll-snap-align: start; /* aligns the start of each section with the start of the viewport */
+}
