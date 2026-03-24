@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import ContactForm from "@/components/ContactForm";
 
 const projects = [
@@ -14,9 +17,63 @@ const projects = [
     link: "https://github.com/briw4/Terminal_portfolio"
   },
 ];
+
+function TiltCard({ children, className }: { children: React.ReactNode; className?: string }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)`;
+  };
+    return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={className}
+      style={{ transition: "transform 0.15s ease-out", willChange: "transform" }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Home(){
+
+   const imgRef = useRef<HTMLDivElement>(null);
+
+  const handleImgMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = imgRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = ((y - rect.height / 2) / rect.height) * -10;
+    const rotateY = ((x - rect.width / 2) / rect.width) * 10;
+    el.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+  };
+
+  const handleImgLeave = () => {
+    const el = imgRef.current;
+    if (!el) return;
+    el.style.transform = `perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)`;
+  };
   return (
-    <>
+      <>
       <section 
         id="home" 
         className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
@@ -39,15 +96,14 @@ export default function Home(){
         </div>
         
         <div className="flex justify-center md:justify-end">
-          <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 dark:border-sky-950 cursor-pointer">
-             <img
+          <TiltCard className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 dark:border-sky-950 cursor-pointer">
+            <img
               src="/profile.jpg"
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />
-          </div>  
-         </div>
-        
+          </TiltCard>
+        </div>
          </div>
       </section>
 
@@ -58,6 +114,8 @@ export default function Home(){
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
 
         <h2 className="text-5xl font-semibold dark:text-white">About Me</h2>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="space-y-5">
         <p className="text-slate-400 mb-4">I am a cybersecurity and networking student passionate about building secure and reliable systems.</p>
         <p className="text-slate-400 mb-4">My interests include network security, system infrastructure, and modern web technologies. I enjoy learning how systems work and how to protect them.</p>
         <p className="text-slate-400 mb-4">Currently, I am working on projects to strengthen my skills in cybersecurity, development, and problem-solving.</p>
@@ -66,6 +124,15 @@ export default function Home(){
             Resume
           </button>
           </a>
+          </div>
+          <div className="space-y-4">
+            {["Network Security", "System Infrastructure", "Web Development", "Problem Solving", "Linux & Bash"].map((skill) => (
+              <div key={skill} className="border dark:border-sky-950 rounded-xl px-5 py-3 shadow-sm">
+                <span className="dark:text-cyan-200 font-medium">{skill}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
 
@@ -76,7 +143,7 @@ export default function Home(){
           <h2 className="text-5xl font-semibold text-center mb-12 dark:text-white">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => ( 
-              <article
+              <TiltCard
                 key={project.title}
                 className="overflow-hidden rounded-2xl border dark:border-sky-950 shadow-sm"
               >
@@ -94,7 +161,7 @@ export default function Home(){
                     </a>
                   </div>
                 </div>
-              </article>
+              </TiltCard>
             ))}
           </div>
         </div>
