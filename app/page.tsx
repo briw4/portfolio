@@ -1,4 +1,19 @@
-
+import { link } from "fs";
+import Link from "next/link";
+const projects = [
+  {
+    title: "Project 1",
+    description: "Description of project 1",
+    image: "/project1.jpg",
+    link: "https://github.com/briw4/clicker_game"
+  },
+  {
+    title: "Project 2",
+    description: "Description of project 2",
+    image: "/project2.jpg",
+    link: "https://github.com/briw4/Terminal_portfolio"
+  },
+];
 export default function Home(){
   return (
     <div>
@@ -32,9 +47,33 @@ export default function Home(){
 
       <section 
         id="projects"
-        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
-        <h2 className="text-3xl font-semibold">Projects</h2>
-        <p className="mt-4">i will add a projects cards here after I complete them.</p>
+        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
+        <div className="w-full">
+          <h2 className="text-3xl font-semibold">Projects</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.map((project) => ( 
+              <article
+                key={project.title}
+                className="overflow-hidden rounded-2xl border border-gray-300 bg-white shadow-sm"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-48 w-full object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <p className="mt-3 text-sm text-gray-700">{project.description}</p>
+                  <div className="mt-4 flex gap-4">
+                    <a href={project.link} target="_blank" rel="noreferrer" className="underline">
+                      View project
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section 
