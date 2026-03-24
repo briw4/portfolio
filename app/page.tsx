@@ -16,18 +16,30 @@ const projects = [
 ];
 export default function Home(){
   return (
-    <div>
+    <>
       <section 
         id="home" 
         className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
         <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center w-full">
           <div>
-        <h1 className="text-5xl font-bold">Maroia Baani</h1>
-        <p className="text-xl">Cybersecurity and networking student</p>
+        <h1 className="text-5xl font-bold mb-12 dark:text-white">Maroia Baani</h1>
+        <p className="text-xl mb-3">Cybersecurity & Networking Student focused on secure systems and modern infrastructure.</p>
+        <div className="flex gap-4 mt-6">
+          <a href="#projects">
+            <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+                view Projects
+            </button>
+          </a>
+          <a href="#about">
+          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+            More
+          </button>
+          </a>
         </div>
-       
+        </div>
+        
         <div className="flex justify-center md:justify-end">
-          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-black shadow-lg">
+          <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 dark:border-sky-950 cursor-pointer">
              <img
               src="/profile.jpg"
               alt="Profile Picture"
@@ -35,13 +47,25 @@ export default function Home(){
             />
           </div>  
          </div>
-        </div>
+        
+         </div>
       </section>
+
+
+
       <section 
         id="about"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
-        <h2 className="text-3xl font-semibold">About Me</h2>
-        <p className="mt-4">I am a cybersecurity and networking student.</p>
+
+        <h2 className="text-5xl font-semibold dark:text-white">About Me</h2>
+        <p className="text-slate-400 mb-4">I am a cybersecurity and networking student passionate about building secure and reliable systems.</p>
+        <p className="text-slate-400 mb-4">My interests include network security, system infrastructure, and modern web technologies. I enjoy learning how systems work and how to protect them.</p>
+        <p className="text-slate-400 mb-4">Currently, I am working on projects to strengthen my skills in cybersecurity, development, and problem-solving.</p>
+        <a href ="/cv.pdf">
+          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+            Resume
+          </button>
+          </a>
       </section>
 
 
@@ -49,12 +73,12 @@ export default function Home(){
         id="projects"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
         <div className="w-full">
-          <h2 className="text-3xl font-semibold text-center mb-12">Projects</h2>
+          <h2 className="text-5xl font-semibold text-center mb-12 dark:text-white">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => ( 
               <article
                 key={project.title}
-                className="overflow-hidden rounded-2xl border border-gray-300 bg-white shadow-sm"
+                className="overflow-hidden rounded-2xl border dark:border-sky-950 shadow-sm"
               >
                 <img
                   src={project.image}
@@ -81,14 +105,14 @@ export default function Home(){
         id="contact"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <div className="w-full">
-        <h2 className="text-3xl font-semibold text-center mb-12">Contact</h2>
+        <h2 className="text-5xl font-semibold text-center mb-12 dark:text-white">Contact</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-gray-300 rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Send a message</h3>
+            <div className="border dark:border-sky-950 rounded-2xl p-6 shadow-sm">
+              <h3 className="text-2xl font-semibold mb-4">Send a message</h3>
               <ContactForm />
             </div>
             <div className="flex flex-col gap-4">
-              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+              <div className="border dark:border-sky-950 rounded-2xl p-5 shadow-sm">
                 <p className="text-sm text-gray">Email</p>
                 <a
                   href="mailto:marwabaani@gmail.com"
@@ -97,7 +121,7 @@ export default function Home(){
                   marwabaani@gmail.com
                 </a>
               </div>
-              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+              <div className="border dark:border-sky-950 rounded-2xl p-5 shadow-sm">
                 <p className="text-sm text-gray-500">LinkedIn</p>
                 <a
                   href="https://www.linkedin.com"
@@ -108,7 +132,7 @@ export default function Home(){
                 </a>
               </div>
 
-              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+              <div className="border dark:border-sky-950 rounded-2xl p-5 shadow-sm">
                 <p className="text-sm text-gray-500">GitHub</p>
                 <a
                   href="https://github.com"
@@ -122,6 +146,6 @@ export default function Home(){
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }

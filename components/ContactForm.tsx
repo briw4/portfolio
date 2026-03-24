@@ -19,20 +19,20 @@ export default function ContactForm() {
       <input
         type="text"
         placeholder="Your name"
-        className="border border-gray-300 rounded-lg px-4 py-2"
+        className="border dark:border-sky-950 rounded-lg px-4 py-2"
       />
 
       <input
         type="email"
         placeholder="Your email"
-        className="border border-gray-300 rounded-lg px-4 py-2"
+        className="border dark:border-sky-950 rounded-lg px-4 py-2"
       />
 
       <textarea
         placeholder="Your message"
         value={message}
         onChange={handleMessageChange}
-          className="w-full h-90 border-2 border-black rounded-lg px-4 py-1 resize-none overflow-y-auto break-words whitespace-pre-wrap"
+          className="w-full h-90 border-2 dark:border-sky-950 rounded-lg px-4 py-1 resize-none overflow-y-auto break-words whitespace-pre-wrap"
       />
 
       <div className="mt-2 flex justify-between text-sm text-gray-500">
@@ -40,7 +40,7 @@ export default function ContactForm() {
         <span>{message.length}/{maxChars} characters</span>
       </div>
 
-      <button className="bg-black text-white rounded-lg py-2">
+      <button className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2">
         Send
       </button>
     </form>
