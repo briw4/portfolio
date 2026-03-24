@@ -1,5 +1,5 @@
-import { link } from "fs";
-import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
+
 const projects = [
   {
     title: "Project 1",
@@ -17,7 +17,6 @@ const projects = [
 export default function Home(){
   return (
     <div>
-
       <section 
         id="home" 
         className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
@@ -38,8 +37,6 @@ export default function Home(){
          </div>
         </div>
       </section>
-
-
       <section 
         id="about"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
@@ -84,38 +81,44 @@ export default function Home(){
         id="contact"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <div className="w-full">
-        <h2 className="text-3xl font-semibold">Contact</h2>
+        <h2 className="text-3xl font-semibold text-center mb-12">Contact</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-black rounded-2xl p-6 shadow-sm">
+            <div className="border border-gray-300 rounded-2xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-4">Send a message</h3>
-              <form className="flex flex-col gap-4">
-                <input 
-                  type="text"
-                  placeholder="Your name"
-                  className="border border-black rounded-lg px-4 py-2"
-                />
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="border border-black rounded-lg px-4 py-2"
-                />
-                <textarea
-                  placeholder="Your message"
-                  className="border border-black rounded-lg px-4 py-2"
-                />
-                <button
-                  type="submit"
-                  className="bg-black text-white rounded-lg py-2 px-4 hover:opacity-90 transition"
-                >
-                  Send
-                </button>
-              </form>
+              <ContactForm />
             </div>
-            <p className="flex flex-col gap-4">
-              <a href="mailto:marwabaani@gmail.com" className="text-blue-500 hover:underline">marwabaani@gmail.com</a>
-              {" "}or connect with me on {" "}
-              <a href="https://www.linkedin.com/in/maroia-baani-896498244" className="text-blue-500 hover:underline">LinkedIn</a>.
-            </p>
+            <div className="flex flex-col gap-4">
+              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+                <p className="text-sm text-gray">Email</p>
+                <a
+                  href="mailto:marwabaani@gmail.com"
+                  className="text-lg font-medium underline"
+                >
+                  marwabaani@gmail.com
+                </a>
+              </div>
+              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+                <p className="text-sm text-gray-500">LinkedIn</p>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  className="text-lg font-medium underline"
+                >
+                  View profile
+                </a>
+              </div>
+
+              <div className="border border-gray-300 rounded-2xl p-5 shadow-sm">
+                <p className="text-sm text-gray-500">GitHub</p>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  className="text-lg font-medium underline"
+                >
+                  View repositories
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
