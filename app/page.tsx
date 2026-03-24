@@ -40,16 +40,17 @@ export default function Home(){
 
       <section 
         id="about"
-        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
+        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
         <h2 className="text-3xl font-semibold">About Me</h2>
         <p className="mt-4">I am a cybersecurity and networking student.</p>
       </section>
+
 
       <section 
         id="projects"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
         <div className="w-full">
-          <h2 className="text-3xl font-semibold">Projects</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => ( 
               <article
@@ -59,7 +60,7 @@ export default function Home(){
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-48 w-full object-cover"
+                  className="h-150 w-full object-cover"
                 />
                 <div className="p-5">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -76,9 +77,10 @@ export default function Home(){
         </div>
       </section>
 
+
       <section 
         id="contact"
-        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
+        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold">Contact</h2>
         <p className="mt-4">You can reach me at{" "}
           <a href="mailto:marwabaani@gmail.com" className="text-blue-500 hover:underline">marwabaani@gmail.com</a>
