@@ -11,7 +11,7 @@ export default function About(){
         <h2 className="text-5xl font-semibold dark:text-white mb-3">About Me</h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-5">
-        <p className="text-slate-400 mb-3 ">
+        <p className="text-2xl text-slate-400 mb-3 ">
           <Typewriter text= "I secure systems. I build things. I never stop learning."/>
         </p>
       

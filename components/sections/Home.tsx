@@ -1,4 +1,5 @@
 import TiltCard from "@/components/ui/TiltCard";
+import Typewriter from "../ui/Typewriter";
 
 export default function Home(){
   return (
@@ -8,7 +9,9 @@ export default function Home(){
         <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center w-full">
           <div>
         <h1 className="text-5xl font-bold mb-12 dark:text-white">Maroia Baani</h1>
-        <p className="text-xl mb-3">Cybersecurity & Networking Student focused on secure systems and modern infrastructure.</p>
+        <p className="text-2xl mb-3">
+          <Typewriter text= "Cybersecurity & Networking Student focused on secure systems and modern infrastructure."/>
+          </p>
         <div className="flex gap-4 mt-6">
           <a href="#projects">
             <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
