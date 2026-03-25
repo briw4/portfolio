@@ -1,5 +1,7 @@
 export default function About(){
+
   return (
+    
 <section 
         id="about"
         className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
@@ -25,5 +27,7 @@ export default function About(){
           </div>
         </div>
       </section>
+      
   );
+
 }
