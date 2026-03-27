@@ -5,6 +5,8 @@ import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
 
+  const [status, setStatus] =useState("");
+  const [loading, setloading] =useState(false);
   const [formData, setFormData] =useState({
     from_name: "",
     from_email:"",
@@ -24,12 +26,15 @@ export default function ContactForm() {
           e.target.style.height = `${e.target.scrollHeight}px`;
           return;
   }
-      setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
 }
   async function sendEmail(e: React.FormEvent) {
+
     e.preventDefault()
 
     try{
+      setStatus("sending ...")
+      setloading(true);
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -41,8 +46,12 @@ export default function ContactForm() {
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
+      setStatus("Message sent")
     }catch (error){
       console.error(error);
+      setStatus("Failed to send the message");
+    }finally {
+      setloading(false);
     }
   }
 
@@ -80,10 +89,16 @@ export default function ContactForm() {
       <div className="mt-2 flex justify-between text-sm text-gray-500">
         <span>{formData.message.length}/{maxChars} characters</span>
       </div>
-
-      <button className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2">
+      
+      <button type ="submit" disabled={loading} className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2">
         Send
       </button>
+      {status && 
+      (<div className="fixed top-5 right-5 z-50 bg-slate-900 text-white px-4 py-3 rounded-lg shadow-lg border border-sky-800">
+        {status}
+        </div>
+      )
+      }
     </form>
   );
 }
