@@ -1,15 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
+
   const [formData, setFormData] =useState({
     from_name: "",
     from_email:"",
     message:"",
   });
-  const maxChars = 500;
 
+  const maxChars = 500;
   const wordCount = formData.message.trim()? formData.message.trim().split(/\s+/).length: 0;
 
   function handleChange(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) {
@@ -23,11 +25,30 @@ export default function ContactForm() {
           return;
   }
       setFormData((prev) => ({ ...prev, [name]: value }));
-
 }
+  async function sendEmail(e: React.FormEvent) {
+    e.preventDefault()
+
+    try{
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.from_name,
+          from_email: formData.from_email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+    }catch (error){
+      console.error(error);
+    }
+  }
+
   return (
-    <form className="flex flex-col gap-4">
-      <input
+        <form onSubmit={sendEmail} className="flex flex-col gap-4">      
+        <input
         type="text"
         name="from_name"
         placeholder="Your name"
@@ -57,7 +78,6 @@ export default function ContactForm() {
       />
 
       <div className="mt-2 flex justify-between text-sm text-gray-500">
-        <span>{wordCount} words</span>
         <span>{formData.message.length}/{maxChars} characters</span>
       </div>
 
