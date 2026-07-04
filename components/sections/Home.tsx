@@ -14,12 +14,12 @@ export default function Home(){
           </p>
         <div className="flex gap-4 mt-6">
           <a href="#projects">
-            <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+            <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)]">
                 view Projects
             </button>
           </a>
           <a href="#about">
-          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)]">
             More
           </button>
           </a>

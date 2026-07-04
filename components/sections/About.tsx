@@ -17,7 +17,7 @@ export default function About(){
         </p>
 
         <a href ="/cv.pdf">
-          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
+          <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)]">
             Resume
           </button>
           </a>
@@ -26,7 +26,7 @@ export default function About(){
             {SKILLS.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center gap-2 border dark:border-sky-950 rounded-xl p-3 shadow-sm"
+                className="flex flex-col items-center gap-2 border dark:border-sky-950 rounded-xl p-3 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_14px_3px_rgba(34,211,238,0.5)] hover:border-cyan-400"
               >
                 <img src={skill.icon} alt={skill.name} className="w-8 h-8" />
                 <span className="text-xs dark:text-cyan-200 font-medium">{skill.name}</span>

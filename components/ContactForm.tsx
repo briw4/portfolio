@@ -88,7 +88,7 @@ export default function ContactForm() {
         <span>{formData.message.length}/{maxChars} characters</span>
       </div>
       
-      <button type ="submit" disabled={loading} className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2">
+      <button type ="submit" disabled={loading} className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)]">
         Send
       </button>
       {status && 
