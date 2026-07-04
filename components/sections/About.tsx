@@ -7,7 +7,7 @@ export default function About(){
     
 <section 
         id="about"
-        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
+        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
 
         <h2 className="text-5xl font-semibold dark:text-white mb-3">About Me</h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">

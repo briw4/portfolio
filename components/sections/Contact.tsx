@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
       <section 
         id="contact"
-        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
+        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <div className="w-full">
         <h2 className="text-5xl font-semibold text-center mb-12 dark:text-white">Contact</h2>
           <div className="grid md:grid-cols-2 gap-8">

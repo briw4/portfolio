@@ -4,13 +4,13 @@ import { PROJECTS } from "@/lib/data";
 
 export default function Project(){
     return (
-  <section 
+  <section
         id="projects"
-        className="h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto"> 
+        className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <div className="w-full">
           <h2 className="text-5xl font-semibold text-center mb-12 dark:text-white">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {PROJECTS.map((project) => ( 
+            {PROJECTS.map((project) => (
               <TiltCard
                 key={project.title}
                 className="overflow-hidden rounded-2xl border dark:border-sky-950 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_25px_6px_rgba(34,211,238,0.6)] hover:border-cyan-400"

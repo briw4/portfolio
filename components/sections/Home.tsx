@@ -5,7 +5,7 @@ export default function Home(){
   return (
       <section 
         id="home" 
-        className="h-screen flex items-center px-6 max-w-4xl mx-auto"> 
+        className="min-h-screen flex items-center px-6 max-w-4xl mx-auto">
         <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center w-full">
           <div>
         <h1 className="text-5xl font-bold mb-12 dark:text-white">Maroia Baani</h1>
