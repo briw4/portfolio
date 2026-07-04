@@ -9,7 +9,7 @@ export default function Project(){
         className="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto">
         <div className="w-full">
           <h2 className="text-5xl font-semibold text-center mb-12 text-[var(--heading)]">Projects</h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2">
             {PROJECTS.map((project) => (
               <TiltCard
                 key={project.title}
