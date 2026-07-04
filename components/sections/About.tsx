@@ -1,4 +1,5 @@
 import Typewriter from "@/components/ui/Typewriter";
+import { SKILLS } from "@/lib/data";
 
 export default function About(){
 
@@ -14,12 +15,24 @@ export default function About(){
         <p className="text-2xl text-slate-400 mb-3 ">
           <Typewriter text= "I secure systems. I build things. I never stop learning."/>
         </p>
-      
+
         <a href ="/cv.pdf">
           <button className="bg-sky-950 dark:text-cyan-200 rounded-lg px-3 py-2">
             Resume
           </button>
           </a>
+
+          <div className="grid grid-cols-5 gap-4 pt-4">
+            {SKILLS.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex flex-col items-center gap-2 border dark:border-sky-950 rounded-xl p-3 shadow-sm"
+              >
+                <img src={skill.icon} alt={skill.name} className="w-8 h-8" />
+                <span className="text-xs dark:text-cyan-200 font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
           </div>
           <div className="space-y-4">
             {["Network Security", "System Infrastructure", "Web Development", "Problem Solving", "Linux & Bash"].map((skill) => (
