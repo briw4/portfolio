@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f5efe6;
+  --fg: #292524;
+  --heading: #1c1917;
+  --nav-bg: #f5efe6;
+  --card-border: #d8cebd;
+  --btn-bg: #fce7f3;
+  --btn-text: #9d174d;
+  --accent: 236 72 153;
+  --accent-text: #be185d;
+}
+
+.dark {
+  --bg: #0a0a0a;
+  --fg: #94a3b8;
+  --heading: #ffffff;
+  --nav-bg: #09090b;
+  --card-border: #082f49;
+  --btn-bg: #082f49;
+  --btn-text: #a5f3fc;
+  --accent: 34 211 238;
+  --accent-text: #a5f3fc;
+}
+
 html {
   scroll-behavior: smooth;
 }
