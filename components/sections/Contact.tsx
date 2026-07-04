@@ -25,8 +25,9 @@ export default function ContactSection() {
               <div className="border dark:border-sky-950 rounded-2xl p-5 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)] hover:border-cyan-400">
                 <p className="text-sm text-gray-500">LinkedIn</p>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/maroia-baani-896498244/"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-lg font-medium underline transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgba(34,211,238,0.8)]"
                 >
                   View profile
@@ -36,8 +37,9 @@ export default function ContactSection() {
               <div className="border dark:border-sky-950 rounded-2xl p-5 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)] hover:border-cyan-400">
                 <p className="text-sm text-gray-500">GitHub</p>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/briw4"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-lg font-medium underline transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgba(34,211,238,0.8)]"
                 >
                   View repositories
