@@ -1,22 +1,19 @@
 "use client";
-import {useEffect, useState} from "react";
+import { useState } from "react";
 import { BG_WORDS } from "@/lib/data";
 
 
 export default function FloatingWords() {
-  const [words, setWords] = useState<{ id: number; word: string; x: number; y: number; delay: number; duration: number }[]>([]);
-
-  useEffect(() => {
-    const generated = Array.from({ length: 28 }, (_, i) => ({
+  const [words] = useState(() =>
+    Array.from({ length: 28 }, (_, i) => ({
       id: i,
       word: BG_WORDS[i % BG_WORDS.length],
       x: Math.random() * 95,
       y: Math.random() * 95,
       delay: Math.random() * 8,
       duration: 4 + Math.random() * 6,
-    }));
-    setWords(generated);
-  }, []);
+    }))
+  );
 
     return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none">
