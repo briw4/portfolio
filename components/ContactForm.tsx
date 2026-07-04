@@ -14,14 +14,12 @@ export default function ContactForm() {
   });
 
   const maxChars = 500;
-  const wordCount = formData.message.trim()? formData.message.trim().split(/\s+/).length: 0;
 
   function handleChange(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) {
     const {name, value}=e.target;
     if (name === "message"){
       const trimmedValue = value.slice(0,maxChars);
           setFormData((prev) => ({ ...prev, [name]: trimmedValue }));
-          const textarea = e.target as HTMLTextAreaElement;
           e.target.style.height = "auto";
           e.target.style.height = `${e.target.scrollHeight}px`;
           return;
