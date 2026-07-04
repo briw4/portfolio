@@ -25,7 +25,7 @@ export const PROJECTS = [
     description: "Infrastructure-as-code for a private IPFS network with cluster-based pin management, Vault-encrypted secrets, and least-privilege systemd services.",
     tags: ["Ansible", "IPFS", "Ansible Vault"],
     link: "https://github.com/briw4/IPFS_Ansible",
-    image: "/projects/ipfs-cluster.jpg"
+    image: "/projects/ipfs_project.png"
   },
   {
     title: "Incremental Game Backend",

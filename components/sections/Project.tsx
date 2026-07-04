@@ -18,7 +18,7 @@ export default function Project(){
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-40 w-full object-cover bg-[var(--nav-bg)]"
+                  className="h-40 w-full object-contain bg-[var(--nav-bg)]"
                 />
                 <div className="p-5">
                   <h3 className="text-lg font-semibold text-[var(--heading)]">{project.title}</h3>
