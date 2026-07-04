@@ -13,7 +13,7 @@ export default function Project(){
             {PROJECTS.map((project) => ( 
               <TiltCard
                 key={project.title}
-                className="overflow-hidden rounded-2xl border dark:border-sky-950 shadow-sm"
+                className="overflow-hidden rounded-2xl border dark:border-sky-950 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_25px_6px_rgba(34,211,238,0.6)] hover:border-cyan-400"
               >
                 <img
                   src={project.image}

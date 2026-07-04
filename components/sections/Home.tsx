@@ -27,7 +27,7 @@ export default function Home(){
         </div>
         
         <div className="flex justify-center md:justify-end">
-          <TiltCard className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 dark:border-sky-950 cursor-pointer">
+          <TiltCard className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 dark:border-sky-950 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_30px_8px_rgba(34,211,238,0.6)]">
             <img
               src="/profile.jpg"
               alt="Profile Picture"

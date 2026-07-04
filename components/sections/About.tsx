@@ -36,7 +36,7 @@ export default function About(){
           </div>
           <div className="space-y-4">
             {["Network Security", "System Infrastructure", "Web Development", "Problem Solving", "Linux & Bash"].map((skill) => (
-              <div key={skill} className="border dark:border-sky-950 rounded-xl px-5 py-3 shadow-sm">
+              <div key={skill} className="border dark:border-sky-950 rounded-xl px-5 py-3 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)] hover:border-cyan-400">
                 <span className="dark:text-cyan-200 font-medium">{skill}</span>
               </div>
             ))}
