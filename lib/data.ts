@@ -7,16 +7,32 @@ export const BG_WORDS = [
 
 export const PROJECTS = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    image: "/project1.jpg",
-    link: "https://github.com/briw4/clicker_game"
+    title: "Cybersecurity Home Lab",
+    description: "Segmented Active Directory home lab for offensive/defensive security practice: OPNsense firewall, Wazuh SIEM, and Kali Linux across isolated client and server subnets.",
+    tags: ["OPNsense", "Active Directory", "Wazuh", "Kali Linux"],
+    link: "https://github.com/briw4/home_lab",
+    image: "/projects/home-lab.jpg"
   },
   {
-    title: "Project 2",
-    description: "Description of project 2",
-    image: "/project2.jpg",
-    link: "https://github.com/briw4/Terminal_portfolio"
+    title: "Monitoring Stack Automation",
+    description: "Ansible playbooks that deploy a full Prometheus + Grafana monitoring stack across multiple nodes, with tag-based selective rollout and centralized metrics collection.",
+    tags: ["Ansible", "Prometheus", "Grafana"],
+    link: "https://github.com/briw4/grafana-prometheus",
+    image: "/projects/monitoring-stack.jpg"
+  },
+  {
+    title: "Private IPFS Cluster",
+    description: "Infrastructure-as-code for a private IPFS network with cluster-based pin management, Vault-encrypted secrets, and least-privilege systemd services.",
+    tags: ["Ansible", "IPFS", "Ansible Vault"],
+    link: "https://github.com/briw4/IPFS_Ansible",
+    image: "/projects/ipfs-cluster.jpg"
+  },
+  {
+    title: "Incremental Game Backend",
+    description: "ASP.NET Core backend for an incremental clicker game: JWT auth, SignalR real-time events, and EF Core persistence for upgrades, achievements, and resets.",
+    tags: [".NET", "SignalR", "Entity Framework"],
+    link: "https://github.com/H-raf0/Incremental_Game",
+    image: "/projects/incremental-game.jpg"
   },
 ];
 
