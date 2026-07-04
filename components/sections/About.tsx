@@ -35,7 +35,7 @@ export default function About(){
           </div>
           </div>
           <div className="space-y-4">
-            {["Network Security", "System Infrastructure", "Web Development", "Problem Solving", "Linux & Bash"].map((skill) => (
+            {["Network Security", "System Infrastructure", "Web Development", "Problem Solving", "Automation"].map((skill) => (
               <div key={skill} className="border border-[var(--card-border)] rounded-xl px-5 py-3 shadow-sm transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgb(var(--accent)/0.55)] hover:border-[var(--accent-text)]">
                 <span className="text-[var(--accent-text)] font-medium">{skill}</span>
               </div>
