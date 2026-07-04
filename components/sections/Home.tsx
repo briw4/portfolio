@@ -14,7 +14,7 @@ export default function Home(){
           </p>
 
         <div className="inline-flex items-center gap-2 border border-[var(--card-border)] rounded-full px-4 py-1.5 mt-2 transition-shadow duration-300 hover:shadow-[0_0_14px_3px_rgb(var(--accent)/0.5)] hover:border-[var(--accent-text)]">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="h-2 w-2 rounded-full bg-purple-500 dark:bg-emerald-400 animate-pulse" />
           <span className="text-sm text-[var(--accent-text)]">Open for apprenticeship</span>
         </div>
 
