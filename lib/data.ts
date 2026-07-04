@@ -32,7 +32,7 @@ export const PROJECTS = [
     description: "ASP.NET Core backend for an incremental clicker game: JWT auth, SignalR real-time events, and EF Core persistence for upgrades, achievements, and resets.",
     tags: [".NET", "SignalR", "Entity Framework"],
     link: "https://github.com/H-raf0/Incremental_Game",
-    image: "/projects/incremental-game.jpg"
+    image: "/projects/clicker_game.png"
   },
 ];
 
