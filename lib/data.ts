@@ -18,7 +18,7 @@ export const PROJECTS = [
     description: "Ansible playbooks that deploy a full Prometheus + Grafana monitoring stack across multiple nodes, with tag-based selective rollout and centralized metrics collection.",
     tags: ["Ansible", "Prometheus", "Grafana"],
     link: "https://github.com/briw4/grafana-prometheus",
-    image: "/projects/monitoring-stack.jpg"
+    image: "/projects/grafana_prometheus.png"
   },
   {
     title: "Private IPFS Cluster",
