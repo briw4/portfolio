@@ -49,4 +49,7 @@ export const SKILLS = [
   { name: "Bash",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
   { name: "Ansible",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" },
   { name: "YAML",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yaml/yaml-original.svg" },
+  { name: "Wireshark",  icon: "https://cdn.simpleicons.org/wireshark/1679A7" },
+  { name: "Burp_Suite", icon: "https://cdn.simpleicons.org/portswigger/FF6633" },
+  { name: "Kali", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kalilinux/kalilinux-original.svg" },
 ];
