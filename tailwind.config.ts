@@ -1,1 +1,0 @@
-darkMode: "class",
