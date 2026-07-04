@@ -11,7 +11,7 @@ export const PROJECTS = [
     description: "Segmented Active Directory home lab for offensive/defensive security practice: OPNsense firewall, Wazuh SIEM, and Kali Linux across isolated client and server subnets.",
     tags: ["OPNsense", "Active Directory", "Wazuh", "Kali Linux"],
     link: "https://github.com/briw4/home_lab",
-    image: "/projects/home-lab.jpg"
+    image: "/projects/homelab_project.png"
   },
   {
     title: "Monitoring Stack Automation",
