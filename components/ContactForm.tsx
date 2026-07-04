@@ -20,8 +20,6 @@ export default function ContactForm() {
     if (name === "message"){
       const trimmedValue = value.slice(0,maxChars);
           setFormData((prev) => ({ ...prev, [name]: trimmedValue }));
-          e.target.style.height = "auto";
-          e.target.style.height = `${e.target.scrollHeight}px`;
           return;
   }
     setFormData((prev) => ({ ...prev, [name]: value }));
