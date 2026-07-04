@@ -60,7 +60,7 @@ export default function ContactForm() {
         value={formData.from_name}
         onChange={handleChange}
         required
-        className="border dark:border-sky-950 rounded-lg px-4 py-2"
+        className="border border-[var(--card-border)] rounded-lg px-4 py-2"
       />
 
       <input
@@ -70,7 +70,7 @@ export default function ContactForm() {
         value={formData.from_email}
         onChange={handleChange}
         required
-        className="border dark:border-sky-950 rounded-lg px-4 py-2"
+        className="border border-[var(--card-border)] rounded-lg px-4 py-2"
       />
 
       <textarea
@@ -79,18 +79,18 @@ export default function ContactForm() {
         value={formData.message}
         onChange={handleChange}
         required
-        className="w-full h-90 border-2 dark:border-sky-950 rounded-lg px-4 py-1 resize-none overflow-y-auto break-words whitespace-pre-wrap"
+        className="w-full h-90 border-2 border-[var(--card-border)] rounded-lg px-4 py-1 resize-none overflow-y-auto break-words whitespace-pre-wrap"
       />
 
-      <div className="mt-2 flex justify-between text-sm text-gray-500">
+      <div className="mt-2 flex justify-between text-sm text-[var(--fg)]">
         <span>{formData.message.length}/{maxChars} characters</span>
       </div>
-      
-      <button type ="submit" disabled={loading} className="bg-sky-950 dark:text-cyan-200 rounded-lg py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.55)]">
+
+      <button type ="submit" disabled={loading} className="bg-[var(--btn-bg)] text-[var(--btn-text)] rounded-lg py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgb(var(--accent)/0.55)]">
         Send
       </button>
-      {status && 
-      (<div className="fixed top-5 right-5 z-50 bg-slate-900 text-white px-4 py-3 rounded-lg shadow-lg border border-sky-800">
+      {status &&
+      (<div className="fixed top-5 right-5 z-50 bg-[var(--nav-bg)] text-[var(--heading)] px-4 py-3 rounded-lg shadow-lg border border-[var(--card-border)]">
         {status}
         </div>
       )

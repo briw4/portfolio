@@ -20,7 +20,7 @@ export default function FloatingWords() {
       {words.map((w) => (
         <span
           key={w.id}
-          className="absolute text-xs font-mono font-semibold text-sky-900/30 dark:text-sky-400/10"
+          className="absolute text-xs font-mono font-semibold text-[rgb(var(--accent)/0.3)] dark:text-[rgb(var(--accent)/0.1)]"
           style={{
             left: `${w.x}%`,
             top: `${w.y}%`,

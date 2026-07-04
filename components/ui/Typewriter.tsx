@@ -21,7 +21,7 @@ export default function Typewriter({ text, className }: { text: string; classNam
   return (
     <span className={className}>
       {text.slice(0, count)}
-      {count < text.length && <span className="animate-pulse text-cyan-400">▌</span>}
+      {count < text.length && <span className="animate-pulse text-[var(--accent-text)]">▌</span>}
     </span>
   );
 }
