@@ -26,6 +26,55 @@
   --accent-text: #a5f3fc;
 }
 
+/* ---- Pixel / retro-gamer mode ---- */
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/fonts/press-start-2p.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+/* pixel mode: hacker terminal, neon green on black — same in light and dark */
+.pixel,
+.pixel.dark {
+  --bg: #050a05;
+  --fg: #3ecf3e;
+  --heading: #00ff41;
+  --nav-bg: #030603;
+  --card-border: #0f3d0f;
+  --btn-bg: #062906;
+  --btn-text: #00ff41;
+  --accent: 0 255 65;
+  --accent-text: #00ff41;
+}
+
+.pixel body {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.pixel h1,
+.pixel h2,
+.pixel h3,
+.pixel nav a,
+.pixel button {
+  font-family: "Press Start 2P", ui-monospace, monospace;
+}
+
+/* Press Start 2P runs huge — rein the scale back in */
+.pixel h1 { font-size: 1.9rem; line-height: 1.6; }
+.pixel h2 { font-size: 1.5rem; line-height: 1.6; }
+.pixel h3 { font-size: 0.95rem; line-height: 1.6; }
+.pixel nav a { font-size: 0.65rem; }
+.pixel button { font-size: 0.7rem; line-height: 1.6; }
+
 html {
   scroll-behavior: smooth;
 }

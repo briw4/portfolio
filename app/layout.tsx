@@ -1,5 +1,6 @@
 import "./globals.css";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import StyleToggle from "@/components/ui/StyleToggle";
 
 export const metadata = {
   title: 'Portfolio',
@@ -11,6 +12,7 @@ const themeInitScript = `
     const stored = localStorage.getItem('theme');
     const dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.classList.toggle('pixel', localStorage.getItem('style') === 'pixel');
   } catch (e) {}
 `;
 
@@ -33,6 +35,7 @@ export default function RootLayout({
             <a href="#projects" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Projects</a>
             <a href="#contact" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Contact</a>
             <ThemeToggle />
+            <StyleToggle />
           </div>
         </nav>
         <main className="pt-16">
