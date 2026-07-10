@@ -29,6 +29,7 @@ export default function RootLayout({
           <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-center gap-6">
             <a href="#home" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Home</a>
             <a href="#about" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">About</a>
+            <a href="#terminal" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Terminal</a>
             <a href="#projects" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Projects</a>
             <a href="#contact" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Contact</a>
             <ThemeToggle />
