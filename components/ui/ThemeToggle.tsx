@@ -17,6 +17,9 @@ export default function ThemeToggle() {
     setIsDark(next);
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
+    // Picking a classic theme always leaves pixel mode
+    document.documentElement.classList.remove("pixel");
+    localStorage.setItem("style", "classic");
   }
 
   return (

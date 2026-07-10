@@ -10,6 +10,12 @@ export default function StyleToggle() {
     // the server can't know this, so syncing here (not deriving it) is required.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsPixel(document.documentElement.classList.contains("pixel"));
+    // The theme toggle can also remove the pixel class — keep the icon in sync.
+    const observer = new MutationObserver(() => {
+      setIsPixel(document.documentElement.classList.contains("pixel"));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
   }, []);
 
   function toggle() {
