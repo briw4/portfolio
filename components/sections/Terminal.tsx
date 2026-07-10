@@ -14,7 +14,6 @@ $$$$$$$  |$$ |      $$ |\$$$$$\$$$$  |\$$$$$$$ |
 const SOCIALS = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/maroia-baani-896498244" },
   { name: "GitHub", url: "https://github.com/briw4" },
-  { name: "Instagram", url: "https://www.instagram.com/b_vv409" },
   { name: "Discord", url: "https://discord.com/channels/@me" },
 ];
 

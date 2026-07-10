@@ -16,12 +16,6 @@ export default function About(){
           <Typewriter text= "I secure systems. I build things. I never stop learning."/>
         </p>
 
-        <a href ="/cv.pdf">
-          <button className="bg-[var(--btn-bg)] text-[var(--btn-text)] rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-[0_0_16px_4px_rgb(var(--accent)/0.55)]">
-            Resume
-          </button>
-          </a>
-
           <div className="grid grid-cols-5 gap-4 pt-4">
             {SKILLS.map((skill) => (
               <div
