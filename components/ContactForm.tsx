@@ -28,21 +28,31 @@ export default function ContactForm() {
 
     e.preventDefault()
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus("Contact form is not configured yet");
+      return;
+    }
+
     try{
       setStatus("sending ...")
       setloading(true);
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        serviceId,
+        templateId,
         {
           from_name: formData.from_name,
           from_email: formData.from_email,
           message: formData.message,
           time: new Date().toLocaleString(),
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        publicKey
       );
       setStatus("Message sent")
+      setFormData({ from_name: "", from_email: "", message: "" });
     }catch (error){
       console.error(error);
       setStatus("Failed to send the message");
