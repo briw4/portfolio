@@ -188,7 +188,7 @@ export default function Terminal() {
     >
       <h2 className="text-5xl font-semibold text-[var(--heading)] mb-3">Terminal</h2>
       <p className="text-[var(--fg)] mb-6">
-        Prefer the command line? Explore this portfolio the hacker way — type <span className="text-[var(--accent-text)] font-mono">help</span> to get started.
+        Prefer the command line? Explore this portfolio.<br /> Type <span className="text-[var(--accent-text)] font-mono">help</span> to get started.
       </p>
 
       <div
