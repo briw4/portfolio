@@ -1,6 +1,5 @@
 import "./globals.css";
-import ThemeToggle from "@/components/ui/ThemeToggle";
-import StyleToggle from "@/components/ui/StyleToggle";
+import ModeToggle from "@/components/ui/ModeToggle";
 
 export const metadata = {
   title: 'Portfolio',
@@ -9,10 +8,9 @@ export const metadata = {
 
 const themeInitScript = `
   try {
-    const stored = localStorage.getItem('theme');
-    const dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.classList.toggle('dark', dark);
-    document.documentElement.classList.toggle('pixel', localStorage.getItem('style') === 'pixel');
+    const mode = localStorage.getItem('mode') || 'cyber';
+    document.documentElement.classList.toggle('pixel', mode === 'cyber');
+    document.documentElement.classList.toggle('dark', mode === 'dark');
   } catch (e) {}
 `;
 
@@ -34,8 +32,7 @@ export default function RootLayout({
             <a href="#terminal" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Terminal</a>
             <a href="#projects" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Projects</a>
             <a href="#contact" className="transition-shadow duration-300 hover:[text-shadow:0_0_10px_rgb(var(--accent)/0.8)] hover:text-[var(--accent-text)]">Contact</a>
-            <ThemeToggle />
-            <StyleToggle />
+            <ModeToggle />
           </div>
         </nav>
         <main className="pt-16">
