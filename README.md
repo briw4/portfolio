@@ -36,15 +36,15 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 
 Restart `npm run dev` after changing `.env.local`.
 
-> Note: `NEXT_PUBLIC_*` variables are embedded in the site at **build time**. The EmailJS public key is meant to be public, so this is safe — but it also means the variables must be set **before** the site is built, both locally and on your host.
+> Note: `NEXT_PUBLIC_*` variables are embedded in the site at **build time**. The EmailJS public key is meant to be public, so this is safe, but it also means the variables must be set **before** the site is built, both locally and on your host.
 
-## Deployment (Vercel — recommended)
+## Deployment (Vercel)
 
 1. Push this repository to GitHub.
 2. Go to [vercel.com](https://vercel.com), sign in with GitHub, click **Add New → Project**, and import this repo. Vercel detects Next.js automatically.
 3. Open **Project Settings → Environment Variables** and add the three `NEXT_PUBLIC_EMAILJS_*` variables from above.
-4. Click **Deploy** (or **Redeploy** if the variables were added after the first deploy — they only take effect on a new build).
+4. Click **Deploy** (or **Redeploy** if the variables were added after the first deploy, they only take effect on a new build).
 
 After that, every `git push` to the main branch automatically redeploys the site.
 
-Alternatives: [Netlify](https://www.netlify.com) and [Cloudflare Pages](https://pages.cloudflare.com) also support Next.js — the same rule applies: set the environment variables in the project settings, then trigger a new build.
+Alternatives: [Netlify](https://www.netlify.com) and [Cloudflare Pages](https://pages.cloudflare.com) also support Next.js, the same rule applies: set the environment variables in the project settings, then trigger a new build.
